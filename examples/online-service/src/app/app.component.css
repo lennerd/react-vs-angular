@@ -1,0 +1,16 @@
+:host {
+  font-family: sans-serif;
+  text-align: center;
+  display: block;
+}
+
+.online-banner {
+  padding: 0.25rem;
+  background-color: crimson;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.online-banner.is-online {
+  background-color: green;
+}
