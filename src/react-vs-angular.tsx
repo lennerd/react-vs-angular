@@ -17,6 +17,12 @@ export default function ReactVsAngular() {
       <Slide>
         <CodeSandbox id="spreading-1nzp7g" />
       </Slide>
+      <Slide>
+        <CodeSandbox
+          id="github/lennerd/react-vs-angular/tree/main/spreading/angular"
+          isStackblitz
+        />
+      </Slide>
       <Slide>TODO Beispiel Props vs. @Input() (Typsicherheit)</Slide>
       <Slide>TODO Beispiel: TSX vs. Compiler (Typsicherheit)</Slide>
       <Slide>TODO Beispiel: Enum im Template verwenden</Slide>

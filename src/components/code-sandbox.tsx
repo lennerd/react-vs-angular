@@ -15,10 +15,17 @@ export interface CodeSandboxProps {
   module?: string;
   view?: "editor" | "split" | "preview";
   runOnClick?: boolean;
+  isStackblitz?: boolean;
 }
 
 const CodeSandbox = memo(
-  ({ id, module, view, runOnClick = true }: CodeSandboxProps) => {
+  ({
+    id,
+    module,
+    view,
+    runOnClick = true,
+    isStackblitz = false,
+  }: CodeSandboxProps) => {
     const { isSlideActive } = useContext(SlideContext);
     const iframeRef = useRef<HTMLIFrameElement>(null);
     const [renderIframe, setRenderIframe] = useState(isSlideActive);
@@ -50,6 +57,7 @@ const CodeSandbox = memo(
     additionQueryParams.push(`runonclick=${Number(runOnClick)}`);
 
     let src = `https://codesandbox.io/embed/${id}?autoresize=1&fontsize=14&theme=dark`;
+    let stackblitzSrc = `https://stackblitz.com/${id}?embed=1`;
 
     if (additionQueryParams.length > 0) {
       src += `&${additionQueryParams.join("&")}`;
@@ -60,7 +68,7 @@ const CodeSandbox = memo(
         {renderIframe && (
           <CodeSandboxIframe
             ref={iframeRef}
-            src={src}
+            src={isStackblitz ? stackblitzSrc : src}
             allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
             sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
           />
