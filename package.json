@@ -10,11 +10,16 @@
   "dependencies": {
     "@types/react": "^18.0.34",
     "@types/react-dom": "^18.0.11",
+    "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react": "^3.1.0",
     "prettier": "^2.8.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "spectacle": "^9.7.0",
+    "styled-components": "^5.3.9",
     "typescript": "^5.0.4",
     "vite": "^4.2.1"
+  },
+  "devDependencies": {
   }
 }
