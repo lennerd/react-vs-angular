@@ -6,11 +6,16 @@ import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatButtonModule } from "@angular/material/button";
 import { BetterButtonDirective } from "./better-button.directive";
-import { ContainerComponent } from './container/container.component';
-import { DisableReasonButtonComponent } from './disable-reason-button/disable-reason-button.component';
+import { ContainerComponent } from "./container/container.component";
+import { DisableReasonDirective } from "./disable-reason/disable-reason.directive";
 
 @NgModule({
-  declarations: [AppComponent, BetterButtonDirective, ContainerComponent, DisableReasonButtonComponent],
+  declarations: [
+    AppComponent,
+    BetterButtonDirective,
+    ContainerComponent,
+    DisableReasonDirective,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
