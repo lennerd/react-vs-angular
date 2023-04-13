@@ -12,55 +12,29 @@ export class AppComponent {
   // mock the observable in tests.
   onlineService = inject(OnlineService);
 
-  // Use the inject function to get the OnlineService. Can be used to mock
-  // the service in tests.
-  // onlineService = inject(OnlineService);
-
   // Create a new WhenOnline instance. Logs the counter to the console when
   // the user is online. Stashes the logs when the user is offline.
-  whenOnlineWithObservable = new WhenOnline(
-    this.onlineService,
-    (counter: number) => {
-      console.log(counter);
-    }
-  );
-
-  // Create a new WhenOnline instance. Logs the counter to the console when
-  // the user is online. Stashes the logs when the user is offline.
-  // whenOnlineWithService = new WhenOnlineWithObservable(
-  //   this.onlineService,
-  //   (counter: number) => {
-  //     console.log(counter);
-  //   }
-  // );
+  whenOnline = new WhenOnline(this.onlineService, (counter: number) => {
+    console.log(counter);
+  });
 
   // Counter state for the sake of the example.
   counter = 1;
 
   ngOnInit() {
     // Initialize listeners.
-    this.whenOnlineWithObservable.init();
-
-    // Initialize listeners.
-    // this.whenOnlineWithService.init();
+    this.whenOnline.init();
   }
 
   ngOnDestroy() {
     // Destroy listeners.
-    this.whenOnlineWithObservable.destroy();
-
-    // Destroy listeners.
-    // this.whenOnlineWithService.destroy();
+    this.whenOnline.destroy();
   }
 
   handleButtonClick() {
     // Call the callback when the user is online, or stash the call when the
     // user is offline.
-    this.whenOnlineWithObservable.next(this.counter);
-
-    // Call the callback when the user is online, or stash the call when the
-    // user is offline.
-    // this.whenOnlineWithService.next(this.counter);
+    this.whenOnline.next(this.counter);
 
     // Increment the counter.
     // Watch-out: being changed in the click handler, the counter will be

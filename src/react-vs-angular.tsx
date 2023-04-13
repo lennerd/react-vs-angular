@@ -1,5 +1,6 @@
-import { Deck, Slide, Heading } from "spectacle";
-import CodeSandbox from "./components/code-sandbox.tsx";
+import { Deck, Heading, Slide } from "spectacle";
+import ComponentSlides from "./slides/component-slides.tsx";
+import ServiceSlides from "./slides/service-slides.tsx";
 
 export default function ReactVsAngular() {
   return (
@@ -11,31 +12,9 @@ export default function ReactVsAngular() {
         <Heading>Intro</Heading>
       </Slide>
 
-      <Slide>
-        <Heading>React- vs. Angular-Komponenten</Heading>
-      </Slide>
-      <Slide>
-        <CodeSandbox id="spreading-1nzp7g" />
-      </Slide>
-      <Slide>
-        <CodeSandbox
-          id="github/lennerd/react-vs-angular/tree/main/spreading/angular"
-          isStackblitz
-        />
-      </Slide>
-      <Slide>TODO Beispiel Props vs. @Input() (Typsicherheit)</Slide>
-      <Slide>TODO Beispiel: TSX vs. Compiler (Typsicherheit)</Slide>
-      <Slide>TODO Beispiel: Enum im Template verwenden</Slide>
-      <Slide>TODO Beispiel: Controlled vs. Uncontrolled</Slide>
-      <Slide>
-        TODO Beispiel: Value-UI? Form-Control-Beispiel mit React.Nodes?
-      </Slide>
+      <ComponentSlides />
 
-      <Slide>
-        <Heading>React-Hook vs. Angular-Service</Heading>
-      </Slide>
-      <Slide>TODO Beispiel, TODO Entwicklungsprozess</Slide>
-      <Slide>TODO Beispiel: Change-Detection: setTimeout?</Slide>
+      <ServiceSlides />
 
       <Slide>
         <Heading>Fazit</Heading>
