@@ -1,4 +1,4 @@
-import { Component, inject, InjectionToken } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { OnlineService } from "./online.service";
 import { WhenOnline } from "./when-online";
 
