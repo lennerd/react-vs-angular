@@ -1,0 +1,5 @@
+<div class="online-banner" [class.is-online]="online">
+  {{ online ? "🟢 Online" : "🔴 Offline" }}
+</div>
+
+<button (click)="handleButtonClick()">Counter: {{ counter }}</button>

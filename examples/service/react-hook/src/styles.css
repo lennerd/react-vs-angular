@@ -1,0 +1,15 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.OnlineBanner {
+  padding: 0.25rem;
+  background-color: crimson;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.OnlineBanner.is-online {
+  background-color: green;
+}

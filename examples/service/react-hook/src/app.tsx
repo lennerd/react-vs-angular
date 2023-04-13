@@ -10,7 +10,7 @@ export default function App() {
 
   // Log the counter to the console when the user is online. Buffer the logs
   // if the user is offline.
-  const log = useWhenOnline((counter) => console.log(counter));
+  const log = useWhenOnline((counter) => console.log(`Counter: ${counter}`));
 
   // Get the online status.
   const isOnline = useOnline();

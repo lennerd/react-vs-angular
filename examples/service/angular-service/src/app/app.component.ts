@@ -15,7 +15,7 @@ export class AppComponent {
   // Create a new WhenOnline instance. Logs the counter to the console when
   // the user is online. Stashes the logs when the user is offline.
   whenOnline = new WhenOnline(this.onlineService, (counter: number) => {
-    console.log(counter);
+    console.log(`Counter: ${counter}`);
   });
 
   // Counter state for the sake of the example.
