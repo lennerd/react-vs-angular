@@ -1,4 +1,4 @@
-import { Deck, Heading, Slide } from "spectacle";
+import { Deck, Heading, ListItem, Slide, UnorderedList } from "spectacle";
 import ComponentSlides from "./slides/component-slides.tsx";
 import ServiceSlides from "./slides/service-slides.tsx";
 
@@ -18,12 +18,14 @@ export default function ReactVsAngular() {
 
       <Slide>
         <Heading>Fazit</Heading>
-        <Slide>
-          React: TypeScript verwenden vs. Angular: Angular verwenden
-        </Slide>
-        <Slide>
-          React: TypeScript verstehen vs. Angular: Angular verstehen
-        </Slide>
+        <UnorderedList>
+          <ListItem>
+            React: Komposition vs. Angular: Dependency Injection
+          </ListItem>
+          <ListItem>
+            React: TypeScript verstehen vs. Angular: Angular verstehen
+          </ListItem>
+        </UnorderedList>
       </Slide>
     </Deck>
   );

@@ -1,13 +1,9 @@
-import { useCallback, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import useOnline from "./use-online";
-import useStableCallback from "./use-stable-callback";
 
 export default function useWhenOnline<TArgs extends any[]>(
   callback: (...args: TArgs) => void
 ) {
-  // Wrap the callback to ensure it is stable between renders.
-  callback = useStableCallback(callback);
-
   // Get the online status.
   const isOnline = useOnline();
   // Ref to store the calls that were made while offline.
@@ -20,18 +16,15 @@ export default function useWhenOnline<TArgs extends any[]>(
       stashedCallsRef.current.map((args) => callback(...args));
       stashedCallsRef.current.length = 0;
     }
-  }, [isOnline, callback]);
+  }, [isOnline]);
 
   // Return a function that calls the callback if online, or stashes the call if
   // offline.
-  return useCallback(
-    (...args: TArgs) => {
-      if (isOnline) {
-        callback(...args);
-      } else {
-        stashedCallsRef.current.push(args);
-      }
-    },
-    [isOnline, callback]
-  );
+  return (...args: TArgs) => {
+    if (isOnline) {
+      callback(...args);
+    } else {
+      stashedCallsRef.current.push(args);
+    }
+  };
 }

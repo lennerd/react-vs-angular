@@ -1,4 +1,4 @@
-import { Observable, Subscription } from "rxjs";
+import { Subscription } from "rxjs";
 import { OnlineService } from "./online.service";
 
 export class WhenOnline<TArgs extends any[]> {

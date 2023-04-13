@@ -3,6 +3,7 @@ import clsx from "clsx";
 import "./styles.css";
 
 export default function App() {
+  // State to track whether the user is online or offline.
   const [isOnline, setIsOnline] = useState(() => navigator.onLine);
 
   // Add an event listener to update the online status.
@@ -25,18 +26,20 @@ export default function App() {
     };
   }, []);
 
+  // Simple counter state for the sake of the example.
   const [counter, setCounter] = useState(1);
 
+  // Log the counter to the console.
   const logCounter = (counter: number) => {
-    if (isOnline) {
-      console.log(`Counter: ${counter}`);
-    } else {
-      stashedCountersRef.current.push(counter);
-    }
+    console.log(`Counter: ${counter}`);
   };
 
+  // Keep track of the counters that were logged while the user was offline.
   const stashedCountersRef = useRef<number[]>([]);
 
+  // When the user comes back online, log the counters that were stashed.
+  // See the dependency array below to see how this effect knows about the
+  // `isOnline` state.
   useEffect(() => {
     if (isOnline && stashedCountersRef.current.length > 0) {
       stashedCountersRef.current.map((counter) => logCounter(counter));
@@ -44,6 +47,8 @@ export default function App() {
     }
   }, [isOnline]);
 
+  // Handle clicks on the counter button. Log the counter to the console if
+  // the user is online. Otherwise, buffer the counter.
   const handleClick = () => {
     if (isOnline) {
       logCounter(counter);
