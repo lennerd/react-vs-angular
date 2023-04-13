@@ -2,11 +2,11 @@
   <div class="label">Label</div>
   <button
     *ngIf="isDisabled"
-    color="primary"
+    color="accent"
     mat-raised-button
     (click)="showReason()"
   >
-    No Luck
+    Click me
   </button>
   <button
     *ngIf="!isDisabled"
@@ -14,7 +14,7 @@
     mat-raised-button
     (click)="onBetterClick($event)"
   >
-    Got Lucky
+    Click me
   </button>
   <div class="info">
     If you are lucky you can click me 2 times and something will happen. If you

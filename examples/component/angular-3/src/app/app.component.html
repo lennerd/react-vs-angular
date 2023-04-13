@@ -1,22 +1,13 @@
 <app-container>
   <ng-container label>Label</ng-container>
   <ng-container>
-    <button
-      *ngIf="isDisabled"
-      color="accent"
-      mat-raised-button
-      (click)="showReason()"
-    >
-      Click me
-    </button>
-    <button
-      *ngIf="!isDisabled"
-      color="primary"
+    <app-disable-reason-button
       (click)="click($event)"
-      mat-raised-button
-    >
-      Click me
-    </button>
+      [isDisabled]="isDisabled"
+      color="primary"
+      reason="You are not lucky enough to click me."
+      >Click me
+    </app-disable-reason-button>
   </ng-container>
   <ng-container info>
     If you are lucky you can click me 2 times and something will happen. If you

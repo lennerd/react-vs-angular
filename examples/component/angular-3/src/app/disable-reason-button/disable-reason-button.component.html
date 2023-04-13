@@ -1,0 +1,7 @@
+<button
+  mat-raised-button
+  [color]="isDisabled ? 'accent' : color"
+  (click)="onClick($event)"
+>
+  <ng-content />
+</button>
