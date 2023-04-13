@@ -5,6 +5,7 @@ import {
   ListItem,
   Slide,
   SlideLayout,
+  Text,
   UnorderedList,
 } from "spectacle";
 import ComponentSlides from "./slides/component-slides.tsx";
@@ -41,6 +42,29 @@ export default function ReactVsAngular() {
       </SlideLayout.Center>
       <SlideLayout.Center>
         <Heading>Intro</Heading>
+
+        <Text textAlign="center">
+          Erfahrungen aus BIS 2.0, SaubereLuft, TARS und BerlinalX
+        </Text>
+
+        <Text textAlign="center">Team arbeitet gerne mit React</Text>
+
+        <Text textAlign="center">
+          Hohe Geschwindigkeit durch React und UI-Library
+        </Text>
+
+        <Text textAlign="center">
+          <strong>Wir lieben React und wollen am liebsten nicht zurück!</strong>
+        </Text>
+      </SlideLayout.Center>
+
+      <SlideLayout.Center>
+        <Heading>Aber warum?</Heading>
+      </SlideLayout.Center>
+
+      <SlideLayout.Center>
+        <Heading>Achtung!</Heading>
+        <Text textAlign="center">Keine Einführung in React oder Angular</Text>
       </SlideLayout.Center>
 
       <ComponentSlides />
@@ -48,22 +72,34 @@ export default function ReactVsAngular() {
       <ServiceSlides />
 
       <SlideLayout.Center>
-        <Heading>Fazit: React vs. Angular</Heading>
-        <UnorderedList>
-          <ListItem>
-            <strong>TypeScript verstehen</strong> vs{" "}
-            <strong>Angular verstehen</strong>
-          </ListItem>
-          <ListItem>
-            <strong>Eher funktional (Komposition)</strong> vs{" "}
-            <strong>
-              eher objektorientiert (DIP = “Dependency Injection Programming”)
-            </strong>
-          </ListItem>
-          <ListItem>
-            <strong>Explizit</strong> vs <strong>Implizit</strong>
-          </ListItem>
-        </UnorderedList>
+        <Heading>Fazit:</Heading>
+
+        <Text textAlign="center">
+          <strong>TypeScript verstehen</strong> vs{" "}
+          <strong>Angular verstehen</strong>
+        </Text>
+
+        <Text textAlign="center">
+          <strong>Eher funktional (Komposition)</strong>
+          <br />
+          vs
+          <br />
+          <strong>
+            eher objektorientiert (DIP = “Dependency Injection Programming”)
+          </strong>
+        </Text>
+
+        <Text textAlign="center">
+          <strong>Explizit</strong> vs <strong>Implizit</strong>
+        </Text>
+      </SlideLayout.Center>
+
+      <SlideLayout.Center>
+        <Heading>Überzeugt?</Heading>
+
+        <Text textAlign="center">Wenn ja, warum?</Text>
+
+        <Text textAlign="center">Wenn nein, warum nicht?</Text>
       </SlideLayout.Center>
 
       <SlideLayout.Center backgroundColor="black">

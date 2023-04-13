@@ -1,12 +1,12 @@
-import { Heading, Slide } from "spectacle";
+import { Heading, Slide, SlideLayout } from "spectacle";
 import StackBlitz from "../components/stack-blitz.tsx";
 
 export default function ComponentSlides() {
   return (
     <>
-      <Slide>
+      <SlideLayout.Center>
         <Heading>React- vs. Angular-Komponenten</Heading>
-      </Slide>
+      </SlideLayout.Center>
       <Slide>
         <StackBlitz id="spreading-1nzp7g" />
       </Slide>

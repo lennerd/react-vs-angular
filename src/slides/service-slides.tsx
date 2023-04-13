@@ -20,6 +20,7 @@ export default function ServiceSlides() {
           file="src/app/app.component.ts"
         />
       </Slide>
+
       <Slide>
         <StackBlitz
           id="github/lennerd/react-vs-angular/tree/main/examples/service/react-component"
