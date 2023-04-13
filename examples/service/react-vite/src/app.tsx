@@ -23,7 +23,7 @@ export default function App() {
           clsx("OnlineBanner", isOnline && "is-online")
         }
       >
-        {isOnline ? "Online" : "Offline"}
+        {isOnline ? "🟢 Online" : "🔴 Offline"}
       </div>
 
       <button
