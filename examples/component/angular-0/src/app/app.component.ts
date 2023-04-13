@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { jsConfetti } from "../main";
+import { MatSnackBar } from "@angular/material/snack-bar";
 
 @Component({
   selector: "app-root",
@@ -6,21 +8,19 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  private counter = 0;
   protected isDisabled = Math.random() > 0.5;
 
-  protected onBetterClick = (event: Event) => {
-    this.counter = this.counter + 1;
+  constructor(private snackBar: MatSnackBar) {}
 
-    if (this.counter % 2 === 0) {
-      event.preventDefault();
-      alert(`You clicked me ${this.counter} time!`);
-    } else {
-      console.log(`You clicked me ${this.counter} time!`);
-    }
+  protected onClick = (event: Event) => {
+    jsConfetti.addConfetti();
+
+    this.snackBar.open("You clicked me!");
   };
 
   protected showReason() {
-    alert("Bad Luck!");
+    jsConfetti.addConfetti();
+
+    this.snackBar.open("You are not lucky enough to click me.");
   }
 }

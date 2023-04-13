@@ -1,5 +1,6 @@
+<script src="app.component.ts"></script>
 <div class="container">
-  <div class="label">Label</div>
+  <div class="label">Great Button</div>
   <button
     *ngIf="isDisabled"
     color="accent"
@@ -12,12 +13,12 @@
     *ngIf="!isDisabled"
     color="primary"
     mat-raised-button
-    (click)="onBetterClick($event)"
+    (click)="onClick($event)"
   >
     Click me
   </button>
   <div class="info">
-    If you are lucky you can click me 2 times and something will happen. If you
-    are not you are informed about it.
+    If you are <em> lucky </em> you can click me <strong> 2 times </strong> and
+    something will happen. If you are not you are informed about it.
   </div>
 </div>

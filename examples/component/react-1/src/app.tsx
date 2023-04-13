@@ -1,23 +1,35 @@
 import { useMemo } from "react";
-import { Heading, Stack } from "@chakra-ui/react";
+import { Heading, Stack, useToast } from "@chakra-ui/react";
 import BetterButton from "./better-button.tsx";
+import JSConfetti from "js-confetti";
+
+export const jsConfetti = new JSConfetti();
 
 export default function App() {
   const isDisabled = useMemo(() => Math.random() > 0.5, []);
+  const toast = useToast();
 
   const onClick = () => {
     if (isDisabled) {
-      alert("You are not lucky enough to click me.");
+      toast({
+        title: "You are not lucky enough to click me.",
+        status: "error",
+        position: "top-right",
+      });
       return;
     }
 
-    console.log("You clicked me!");
+    toast({
+      title: "You clicked me!",
+      status: "success",
+      position: "top-right",
+    });
   };
 
   return (
     <>
       <Stack alignItems="center">
-        <Heading>Label</Heading>
+        <Heading>Great Button</Heading>
         <BetterButton
           onClick={onClick}
           colorScheme={isDisabled ? "pink" : undefined}
@@ -25,8 +37,7 @@ export default function App() {
           Click me!
         </BetterButton>
         <div>
-          If you are lucky you can click me 2 times and something will happen.
-          If you are not you are informed about it.
+          If you are <em> lucky </em> your click will be successful.
         </div>
       </Stack>
     </>

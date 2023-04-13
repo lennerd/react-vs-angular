@@ -12,7 +12,7 @@ export default function Container({ children, heading, info }: ContainerProps) {
     <Stack alignItems="center">
       <Heading>{heading}</Heading>
       {children}
-      {info && <div>{info}</div>}
+      {info != null && <div>{info}</div>}
     </Stack>
   );
 }

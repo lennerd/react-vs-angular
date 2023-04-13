@@ -8,6 +8,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { BetterButtonDirective } from "./better-button.directive";
 import { ContainerComponent } from "./container/container.component";
 import { DisableReasonDirective } from "./disable-reason/disable-reason.directive";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { DisableReasonDirective } from "./disable-reason/disable-reason.directiv
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -6,7 +6,8 @@ import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatButtonModule } from "@angular/material/button";
 import { BetterButtonDirective } from "./better-button.directive";
-import { ContainerComponent } from './container/container.component';
+import { ContainerComponent } from "./container/container.component";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [AppComponent, BetterButtonDirective, ContainerComponent],
@@ -15,6 +16,7 @@ import { ContainerComponent } from './container/container.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
