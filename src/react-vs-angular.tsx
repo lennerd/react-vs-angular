@@ -1,13 +1,4 @@
-import {
-  Deck,
-  Grid,
-  Heading,
-  ListItem,
-  Slide,
-  SlideLayout,
-  Text,
-  UnorderedList,
-} from "spectacle";
+import { Deck, Grid, Heading, SlideLayout, Text } from "spectacle";
 import ComponentSlides from "./slides/component-slides.tsx";
 import ServiceSlides from "./slides/service-slides.tsx";
 
