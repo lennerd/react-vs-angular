@@ -1,15 +1,21 @@
-import { Subscription } from 'rxjs';
-import { isOnline } from './is-online';
+import { Observable, Subscription } from "rxjs";
+import { OnlineService } from "./online.service";
 
 export class WhenOnline<TArgs extends any[]> {
   private subscription?: Subscription;
   private online = false;
   private stashedCalls: TArgs[] = [];
 
-  constructor(private callback: (...args: TArgs) => void) {}
+  constructor(
+    private onlineService: OnlineService,
+    private callback: (...args: TArgs) => void
+  ) {}
 
   init() {
-    this.subscription = isOnline().subscribe((online) => {
+    this.onlineService.init();
+
+    // Subscribe to the online status.
+    this.subscription = this.onlineService.online$.subscribe((online) => {
       this.online = online;
 
       if (this.online && this.stashedCalls.length > 0) {
@@ -20,10 +26,14 @@ export class WhenOnline<TArgs extends any[]> {
   }
 
   destroy() {
+    this.onlineService.destroy();
+
+    // Unsubscribe from the online status.
     this.subscription?.unsubscribe();
   }
 
   next(...args: TArgs) {
+    // Call the callback if online, or stash the call if offline.
     if (this.online) {
       this.callback(...args);
     } else {

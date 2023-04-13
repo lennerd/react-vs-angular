@@ -39,6 +39,12 @@ export default function ReactVsAngular() {
 
       <Slide>
         <Heading>Fazit</Heading>
+        <Slide>
+          React: TypeScript verwenden vs. Angular: Angular verwenden
+        </Slide>
+        <Slide>
+          React: TypeScript verstehen vs. Angular: Angular verstehen
+        </Slide>
       </Slide>
     </Deck>
   );

@@ -1,0 +1,8 @@
+<div class="online-banner" [class.is-online]="onlineService.online$ | async">
+  <ng-container *ngIf="onlineService.online$ | async; else offline">
+    🟢 Online
+  </ng-container>
+  <ng-template #offline>🔴 Offline</ng-template>
+</div>
+
+<button (click)="handleButtonClick()">Counter: {{ counter }}</button>
