@@ -1,12 +1,12 @@
-import { Heading, ListItem, Slide, UnorderedList } from "spectacle";
+import { Heading, Slide, SlideLayout } from "spectacle";
 import StackBlitz from "../components/stack-blitz.tsx";
 
 export default function ServiceSlides() {
   return (
     <>
-      <Slide>
+      <SlideLayout.Center>
         <Heading>React-Hook vs. Angular-Service</Heading>
-      </Slide>
+      </SlideLayout.Center>
 
       <Slide>
         <StackBlitz
@@ -31,21 +31,6 @@ export default function ServiceSlides() {
           id="github/lennerd/react-vs-angular/tree/main/examples/service/react-hook"
           file="src/app.tsx"
         />
-      </Slide>
-
-      <Slide>TODO Stackblitz: UI-Logik aus React-Komponente herausziehen</Slide>
-      <Slide>
-        TODO Stackblitz: UI-Logik aus Angular-Komponente herausziehen
-      </Slide>
-
-      <Slide>
-        <Heading>Probleme</Heading>
-
-        <UnorderedList>
-          <ListItem>Einfaches Rauskopieren</ListItem>
-          <ListItem>Einklinken in den Life-Cycle</ListItem>
-          <ListItem>Change-Detection</ListItem>
-        </UnorderedList>
       </Slide>
     </>
   );

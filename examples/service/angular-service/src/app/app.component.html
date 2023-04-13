@@ -1,10 +1,10 @@
-<div class="online-banner" [class.is-online]="onlineService.online$ | async">
-  {{ (onlineService.online$ | async) ? "🟢 Online" : "🔴 Offline" }}
+<div class="online-banner" [class.is-online]="onlineService.online">
+  {{ onlineService.online ? "🟢 Online" : "🔴 Offline" }}
 </div>
 
 <div>
   <button (click)="handleButtonClick()">Counter: {{ counter }}</button>{{ " " }}
   <button (click)="onlineService.toggle()">
-    {{ (onlineService.online$ | async) ? "Go online" : "Go offline" }}
+    {{ onlineService.online ? "Go online" : "Go offline" }}
   </button>
 </div>

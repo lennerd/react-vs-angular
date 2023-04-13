@@ -50,7 +50,7 @@ export class AppComponent {
     this.online = true;
 
     // Log stashed counters when the user is online.
-    if (this.online && this.stashedCounters.length > 0) {
+    if (this.stashedCounters.length > 0) {
       this.stashedCounters.map((counter) => this.logCounter(counter));
       this.stashedCounters.length = 0;
     }

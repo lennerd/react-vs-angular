@@ -12,6 +12,10 @@ export class OnlineService {
     return this.online$$.asObservable();
   }
 
+  get online() {
+    return this.online$$.getValue();
+  }
+
   init() {
     // Subscribe to the online status.
     window.addEventListener("online", this.handleOnline);

@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
+import { useEffect, useRef, useState } from "react";
 import "./styles.css";
-import toggleOnline from "./toggle-online.ts";
+import toggleOnline from "./toggle-online";
 
 export default function App() {
   // State to track whether the user is online or offline.
@@ -10,9 +10,13 @@ export default function App() {
   // Add an event listener to update the online status.
   useEffect(() => {
     const handleOnline = () => {
+      console.log("-- Went online --");
+
       setIsOnline(true);
     };
     const handleOffline = () => {
+      console.log("-- Went offline --");
+
       setIsOnline(false);
     };
 
