@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="label">Label</div>
+  <button
+    *ngIf="isDisabled"
+    color="primary"
+    mat-raised-button
+    (click)="showReason()"
+  >
+    No Luck
+  </button>
+  <button
+    *ngIf="!isDisabled"
+    color="primary"
+    mat-raised-button
+    (click)="onBetterClick($event)"
+  >
+    Got Lucky
+  </button>
+  <div class="info">
+    If you are lucky you can click me 10 times and something will happen. If you
+    are not you are informed about it.
+  </div>
+</div>
