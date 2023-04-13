@@ -11,13 +11,13 @@ export default function ComponentSlides() {
       <Slide>
         <StackBlitz
           id="github/lennerd/react-vs-angular/tree/main/examples/component/react-0"
-          file="src/app/app.tsx"
+          file="src/app.tsx"
         />
       </Slide>
       <Slide>
         <StackBlitz
           id="github/lennerd/react-vs-angular/tree/main/examples/component/react-1"
-          file="src/app/app.tsx"
+          file="src/app.tsx"
         />
       </Slide>
       <Slide>
@@ -35,7 +35,7 @@ export default function ComponentSlides() {
       <Slide>
         <StackBlitz
           id="github/lennerd/react-vs-angular/tree/main/examples/component/react-2"
-          file="src/app/app.tsx"
+          file="src/app.tsx"
         />
       </Slide>
       <Slide>
@@ -47,7 +47,7 @@ export default function ComponentSlides() {
       <Slide>
         <StackBlitz
           id="github/lennerd/react-vs-angular/tree/main/examples/component/react-3"
-          file="src/app/app.tsx"
+          file="src/app.tsx"
         />
       </Slide>
       <Slide>
