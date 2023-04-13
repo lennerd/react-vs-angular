@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import "./styles.css";
+import toggleOnline from "./toggle-online.ts";
 
 export default function App() {
   // State to track whether the user is online or offline.
@@ -70,8 +71,12 @@ export default function App() {
       >
         {isOnline ? "🟢 Online" : "🔴 Offline"}
       </div>
-
-      <button onClick={handleClick}>Counter: {counter}</button>
+      <div>
+        <button onClick={handleClick}>Counter: {counter}</button>{" "}
+        <button onClick={() => toggleOnline()}>
+          {isOnline ? "Go offline" : "Go online"}
+        </button>
+      </div>
     </div>
   );
 }

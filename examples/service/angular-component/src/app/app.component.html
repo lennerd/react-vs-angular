@@ -2,4 +2,9 @@
   {{ online ? "🟢 Online" : "🔴 Offline" }}
 </div>
 
-<button (click)="handleButtonClick()">Counter: {{ counter }}</button>
+<div>
+  <button (click)="handleButtonClick()">Counter: {{ counter }}</button>{{ " " }}
+  <button (click)="toggleOnline()">
+    {{ online ? "Go online" : "Go offline" }}
+  </button>
+</div>

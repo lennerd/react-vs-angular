@@ -17,13 +17,17 @@ export default function ReactVsAngular() {
       <ServiceSlides />
 
       <Slide>
-        <Heading>Fazit</Heading>
+        <Heading>Fazit: React vs. Angular</Heading>
         <UnorderedList>
           <ListItem>
-            React: Komposition vs. Angular: Dependency Injection
+            <strong>TypeScript verstehen</strong> vs.{" "}
+            <strong>Angular verstehen</strong>
           </ListItem>
           <ListItem>
-            React: TypeScript verstehen vs. Angular: Angular verstehen
+            <strong>Eher funktional (Komposition)</strong> vs.{" "}
+            <strong>
+              eher objektorientiert (DIP = “Dependency Injection Programming”)
+            </strong>
           </ListItem>
         </UnorderedList>
       </Slide>

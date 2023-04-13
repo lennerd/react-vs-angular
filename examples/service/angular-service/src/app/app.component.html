@@ -2,4 +2,9 @@
   {{ (onlineService.online$ | async) ? "🟢 Online" : "🔴 Offline" }}
 </div>
 
-<button (click)="handleButtonClick()">Counter: {{ counter }}</button>
+<div>
+  <button (click)="handleButtonClick()">Counter: {{ counter }}</button>{{ " " }}
+  <button (click)="onlineService.toggle()">
+    {{ (onlineService.online$ | async) ? "Go online" : "Go offline" }}
+  </button>
+</div>

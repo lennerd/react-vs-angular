@@ -1,6 +1,7 @@
-import { useState } from "react";
 import clsx from "clsx";
+import { useState } from "react";
 import "./styles.css";
+import toggleOnline from "./toggle-online";
 import useOnline from "./use-online";
 import useWhenOnline from "./use-when-online";
 
@@ -26,17 +27,22 @@ export default function App() {
         {isOnline ? "🟢 Online" : "🔴 Offline"}
       </div>
 
-      <button
-        onClick={() => {
-          // Log the counter to the console.
-          log(counter);
+      <div>
+        <button
+          onClick={() => {
+            // Log the counter to the console.
+            log(counter);
 
-          // Increment the counter.
-          setCounter(counter + 1);
-        }}
-      >
-        Counter: {counter}
-      </button>
+            // Increment the counter.
+            setCounter(counter + 1);
+          }}
+        >
+          Counter: {counter}
+        </button>{" "}
+        <button onClick={() => toggleOnline()}>
+          {isOnline ? "Go offline" : "Go online"}
+        </button>
+      </div>
     </div>
   );
 }

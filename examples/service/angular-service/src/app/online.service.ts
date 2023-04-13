@@ -24,6 +24,11 @@ export class OnlineService {
     window.removeEventListener("offline", this.handleOffline);
   }
 
+  // Simulate online and offline events.
+  toggle(isOnline = !this.online$$.getValue()) {
+    window.dispatchEvent(new Event(isOnline ? "online" : "offline"));
+  }
+
   private handleOnline = () => {
     this.online$$.next(true);
   };

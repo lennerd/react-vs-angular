@@ -40,6 +40,10 @@ export class AppComponent {
     this.counter += 1;
   }
 
+  toggleOnline(isOnline = !this.online) {
+    window.dispatchEvent(new Event(isOnline ? "online" : "offline"));
+  }
+
   private handleOnline = () => {
     this.online = true;
 
