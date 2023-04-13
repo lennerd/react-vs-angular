@@ -45,6 +45,8 @@ export class AppComponent {
   }
 
   private handleOnline = () => {
+    console.log("-- Went online --");
+
     this.online = true;
 
     // Log stashed counters when the user is online.
@@ -55,6 +57,8 @@ export class AppComponent {
   };
 
   private handleOffline = () => {
+    console.log("-- Went offline --");
+
     this.online = false;
   };
 

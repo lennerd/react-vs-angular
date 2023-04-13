@@ -8,9 +8,13 @@ export default function useOnline() {
   // Add an event listener to update the online status.
   useEffect(() => {
     const handleOnline = () => {
+      console.log("-- Went online --");
+
       setIsOnline(true);
     };
     const handleOffline = () => {
+      console.log("-- Went offline --");
+
       setIsOnline(false);
     };
 

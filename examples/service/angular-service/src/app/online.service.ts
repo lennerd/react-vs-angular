@@ -30,10 +30,14 @@ export class OnlineService {
   }
 
   private handleOnline = () => {
+    console.log("-- Went online --");
+
     this.online$$.next(true);
   };
 
   private handleOffline = () => {
+    console.log("-- Went offline --");
+
     this.online$$.next(false);
   };
 }
