@@ -9,9 +9,9 @@ export class BetterButtonDirective {
   @HostListener("click", ["$event"])
   onBetterClick = (event: Event) => {
     this.counter = this.counter + 1;
-    if (this.counter % 10 === 0) {
+    if (this.counter % 2 === 0) {
       event.preventDefault();
-      alert("You clicked me 10 times!");
+      alert("You clicked me 2 times!");
     }
   };
 }

@@ -1,0 +1,25 @@
+<app-container>
+  <ng-container label>Label</ng-container>
+  <ng-container>
+    <button
+      *ngIf="isDisabled"
+      color="primary"
+      mat-raised-button
+      (click)="showReason()"
+    >
+      No Luck
+    </button>
+    <button
+      *ngIf="!isDisabled"
+      color="primary"
+      (click)="click($event)"
+      mat-raised-button
+    >
+      Got Lucky
+    </button>
+  </ng-container>
+  <ng-container info>
+    If you are lucky you can click me 2 times and something will happen. If you
+    are not you are informed about it.
+  </ng-container>
+</app-container>
