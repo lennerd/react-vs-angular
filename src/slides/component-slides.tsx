@@ -6,19 +6,55 @@ export default function ComponentSlides() {
     <>
       <SlideLayout.Center>
         <Heading>React- vs. Angular-Komponenten</Heading>
+        TODO
       </SlideLayout.Center>
       <Slide>
-        <StackBlitz id="spreading-1nzp7g" />
+        <StackBlitz
+          id="github/lennerd/react-vs-angular/tree/main/examples/component/react-0"
+          file="src/app/app.tsx"
+        />
       </Slide>
       <Slide>
-        <StackBlitz id="github/lennerd/react-vs-angular/tree/main/spreading/angular" />
+        <StackBlitz
+          id="github/lennerd/react-vs-angular/tree/main/examples/component/react-1"
+          file="src/app/app.tsx"
+        />
       </Slide>
-      <Slide>TODO Beispiel Props vs. @Input() (Typsicherheit)</Slide>
-      <Slide>TODO Beispiel: TSX vs. Compiler (Typsicherheit)</Slide>
-      <Slide>TODO Beispiel: Enum im Template verwenden</Slide>
-      <Slide>TODO Beispiel: Controlled vs. Uncontrolled</Slide>
       <Slide>
-        TODO Beispiel: Value-UI? Form-Control-Beispiel mit React.Nodes?
+        <StackBlitz
+          id="github/lennerd/react-vs-angular/tree/main/examples/component/angular-0"
+          file="src/app/app.component.ts"
+        />
+      </Slide>
+      <Slide>
+        <StackBlitz
+          id="github/lennerd/react-vs-angular/tree/main/examples/component/angular-1"
+          file="src/app/app.component.ts"
+        />
+      </Slide>
+      <Slide>
+        <StackBlitz
+          id="github/lennerd/react-vs-angular/tree/main/examples/component/react-2"
+          file="src/app/app.tsx"
+        />
+      </Slide>
+      <Slide>
+        <StackBlitz
+          id="github/lennerd/react-vs-angular/tree/main/examples/component/angular-2"
+          file="src/app/app.component.ts"
+        />
+      </Slide>
+      <Slide>
+        <StackBlitz
+          id="github/lennerd/react-vs-angular/tree/main/examples/component/react-3"
+          file="src/app/app.tsx"
+        />
+      </Slide>
+      <Slide>
+        <StackBlitz
+          id="github/lennerd/react-vs-angular/tree/main/examples/component/angular-3"
+          file="src/app/app.component.ts"
+        />
       </Slide>
     </>
   );
