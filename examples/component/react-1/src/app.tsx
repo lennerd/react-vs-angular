@@ -14,7 +14,6 @@ export default function App() {
       toast({
         title: "You are not lucky enough to click me.",
         status: "error",
-        position: "top-right",
       });
       return;
     }
@@ -22,7 +21,6 @@ export default function App() {
     toast({
       title: "You clicked me!",
       status: "success",
-      position: "top-right",
     });
   };
 

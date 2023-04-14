@@ -27,7 +27,6 @@ export default function App() {
             toast({
               title: "You clicked me!",
               status: "success",
-              position: "top-right",
             })
           }
         >
