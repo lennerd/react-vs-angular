@@ -5,10 +5,10 @@ import { jsConfetti } from "./app.tsx";
 interface BetterButtonProps extends ButtonProps {}
 
 export default function BetterButton({ onClick, ...props }: BetterButtonProps) {
-  const onBetterClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     jsConfetti.addConfetti();
     onClick?.(event);
   };
 
-  return <Button onClick={onBetterClick} {...props} />;
+  return <Button onClick={handleClick} {...props} />;
 }
