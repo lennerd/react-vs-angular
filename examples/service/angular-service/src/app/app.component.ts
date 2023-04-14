@@ -37,9 +37,6 @@ export class AppComponent {
     this.whenOnline.next(this.counter);
 
     // Increment the counter.
-    // Watch-out: being changed in the click handler, the counter will be
-    // picked up by Angular's change detection and the template will be
-    // updated automagically.
     this.counter += 1;
   }
 }

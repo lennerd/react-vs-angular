@@ -1,4 +1,4 @@
-import { Deck, Grid, Heading, SlideLayout, Text } from "spectacle";
+import { Appear, Deck, Grid, Heading, SlideLayout, Text } from "spectacle";
 import ComponentSlides from "./slides/component-slides.tsx";
 import ServiceSlides from "./slides/service-slides.tsx";
 
@@ -34,19 +34,29 @@ export default function ReactVsAngular() {
       <SlideLayout.Center>
         <Heading>Intro</Heading>
 
-        <Text textAlign="center">
-          Erfahrungen aus BIS 2.0, SaubereLuft, TARS und BerlinalX
-        </Text>
+        <Appear>
+          <Text textAlign="center">
+            Erfahrungen aus BIS 2.0, SaubereLuft, TARS,
+            <br />
+            Roads Web und BerlinalX
+          </Text>
+        </Appear>
 
-        <Text textAlign="center">Team arbeitet gerne mit React</Text>
+        <Appear>
+          <Text textAlign="center">Team arbeitet gerne mit React</Text>
+        </Appear>
 
-        <Text textAlign="center">
-          Hohe Geschwindigkeit durch React und UI-Library
-        </Text>
+        <Appear>
+          <Text textAlign="center">
+            Hohe Geschwindigkeit durch React und UI-Library
+          </Text>
+        </Appear>
 
-        <Text textAlign="center">
-          <strong>Wir lieben React und wollen am liebsten nicht zurück!</strong>
-        </Text>
+        <Appear>
+          <Text textAlign="center">
+            <strong>Wir lieben React und wollen nicht mehr zurück!</strong>
+          </Text>
+        </Appear>
       </SlideLayout.Center>
 
       <SlideLayout.Center>
@@ -65,24 +75,30 @@ export default function ReactVsAngular() {
       <SlideLayout.Center>
         <Heading>Fazit:</Heading>
 
-        <Text textAlign="center">
-          <strong>TypeScript verstehen</strong> vs{" "}
-          <strong>Angular verstehen</strong>
-        </Text>
+        <Appear>
+          <Text textAlign="center">
+            <strong>TypeScript verstehen</strong> vs{" "}
+            <strong>Angular verstehen</strong>
+          </Text>
+        </Appear>
 
-        <Text textAlign="center">
-          <strong>Eher funktional (Komposition)</strong>
-          <br />
-          vs
-          <br />
-          <strong>
-            eher objektorientiert (DIP = “Dependency Injection Programming”)
-          </strong>
-        </Text>
+        <Appear>
+          <Text textAlign="center">
+            <strong>Eher funktional (Komposition)</strong>
+            <br />
+            vs
+            <br />
+            <strong>
+              Eher objektorientiert (DIP = “Dependency Injection Programming”)
+            </strong>
+          </Text>
+        </Appear>
 
-        <Text textAlign="center">
-          <strong>Explizit</strong> vs <strong>Implizit</strong>
-        </Text>
+        <Appear>
+          <Text textAlign="center">
+            <strong>Explizit</strong> vs <strong>Implizit</strong>
+          </Text>
+        </Appear>
       </SlideLayout.Center>
 
       <SlideLayout.Center>
