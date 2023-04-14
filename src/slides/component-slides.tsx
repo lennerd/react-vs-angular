@@ -10,7 +10,7 @@ export default function ComponentSlides() {
       </SlideLayout.Center>
       <Slide>
         <StackBlitz
-          id="github/lennerd/react-vs-angular/tree/main/examples/component/react"
+          id="github/lennerd/react-vs-angular/tree/main/examples/component/reacting"
           file="src/app.tsx"
         />
       </Slide>
