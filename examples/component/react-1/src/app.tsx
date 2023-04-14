@@ -37,7 +37,8 @@ export default function App() {
           Click me!
         </BetterButton>
         <div>
-          If you are <em> lucky </em> your click will be successful.
+          This is a <strong> Button </strong> that is sometimes working and
+          sometimes not, it should tell you why.
         </div>
       </Stack>
     </>

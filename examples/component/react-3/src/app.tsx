@@ -16,9 +16,8 @@ export default function App() {
         heading="Great Button"
         info={
           <>
-            If you are <em> lucky </em> you can click me
-            <strong> 2 times </strong> and something will happen. If you are not
-            you are informed about it.
+            This is a <strong> Button </strong> that is sometimes working and
+            sometimes not, it should tell you why.
           </>
         }
       >
