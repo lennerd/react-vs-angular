@@ -6,7 +6,6 @@ export default function ComponentSlides() {
     <>
       <SlideLayout.Center>
         <Heading>React- vs. Angular-Komponenten</Heading>
-        TODO
       </SlideLayout.Center>
       <Slide>
         <StackBlitz
