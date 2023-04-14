@@ -5,7 +5,7 @@ export default function ServiceSlides() {
   return (
     <>
       <SlideLayout.Center>
-        <Heading>React-Hook vs. Angular-Service</Heading>
+        <Heading>React-Hook vs Angular-Service</Heading>
       </SlideLayout.Center>
 
       <Slide>

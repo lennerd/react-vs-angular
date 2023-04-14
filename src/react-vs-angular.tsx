@@ -27,7 +27,7 @@ export default function ReactVsAngular() {
               zIndex: 2,
             }}
           >
-            React vs. Angular
+            React vs Angular
           </Heading>
         </Grid>
       </SlideLayout.Center>
