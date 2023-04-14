@@ -1,4 +1,12 @@
-import { Appear, Deck, Grid, Heading, SlideLayout, Text } from "spectacle";
+import {
+  Appear,
+  Deck,
+  Grid,
+  Heading,
+  Link,
+  SlideLayout,
+  Text,
+} from "spectacle";
 import ComponentSlides from "./slides/component-slides.tsx";
 import ServiceSlides from "./slides/service-slides.tsx";
 
@@ -17,18 +25,33 @@ export default function ReactVsAngular() {
             }}
             src="https://media.giphy.com/media/FOG3rc0p9UGI0/giphy-downsized-large.gif"
           />
-          <Heading
+          <div
             style={{
               gridArea: "1 / 1",
               alignSelf: "center",
-              padding: 0,
-              margin: 0,
               position: "relative",
+              paddingTop: "2rem",
               zIndex: 2,
+              textAlign: "center",
             }}
           >
-            React vs Angular
-          </Heading>
+            <Heading
+              style={{
+                padding: 0,
+                margin: 0,
+                marginBottom: "0rem",
+              }}
+            >
+              React vs Angular
+            </Heading>
+
+            <Link
+              fontSize="1.25rem"
+              href="https://react-vs-angular-wps.vercel.app/"
+            >
+              react-vs-angular-wps.vercel.app
+            </Link>
+          </div>
         </Grid>
       </SlideLayout.Center>
       <SlideLayout.Center>
@@ -110,7 +133,18 @@ export default function ReactVsAngular() {
       </SlideLayout.Center>
 
       <SlideLayout.Center backgroundColor="black">
-        <Heading>Danke!</Heading>
+        <div style={{ textAlign: "center" }}>
+          <Heading margin={0} padding={0}>
+            Danke!
+          </Heading>
+
+          <Link
+            fontSize="1.25rem"
+            href="https://react-vs-angular-wps.vercel.app/"
+          >
+            react-vs-angular-wps.vercel.app
+          </Link>
+        </div>
       </SlideLayout.Center>
     </Deck>
   );
